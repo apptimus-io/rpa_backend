@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { buildApp } from "../src/app.js";
+import { buildApp } from "../src/http-app.js";
 import { env } from "../src/config/env.js";
 import { DomSnapshot } from "../src/db/models.js";
 import { shouldUseDatabase } from "../src/db/runtime.js";

@@ -1,8 +1,9 @@
-import { buildApp } from "./app.js";
-import { env } from "./config/env.js";
-import { initializeDatabase } from "./db/index.js";
-import { closeDatabase } from "./db/sequelize.js";
-import { safeLogError } from "./utils/logger.js";
+import "mysql2";
+import { buildApp } from "./src/http-app.js";
+import { env } from "./src/config/env.js";
+import { initializeDatabase } from "./src/db/index.js";
+import { closeDatabase } from "./src/db/sequelize.js";
+import { safeLogError } from "./src/utils/logger.js";
 
 const app = await buildApp();
 
