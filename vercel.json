@@ -3,10 +3,10 @@
   "installCommand": "npm install && npm install mysql2",
   "buildCommand": "npm run vercel-build",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api" }
+    { "source": "/(.*)", "destination": "/api/index" }
   ],
   "functions": {
-    "api/index.ts": {
+    "api/index.js": {
       "maxDuration": 60,
       "memory": 1024,
       "includeFiles": "node_modules/mysql2/**"
