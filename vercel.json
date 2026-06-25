@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "installCommand": "npm install",
+  "installCommand": "npm install && npm install mysql2",
   "buildCommand": "npm run vercel-build",
   "rewrites": [
     { "source": "/(.*)", "destination": "/api" }
