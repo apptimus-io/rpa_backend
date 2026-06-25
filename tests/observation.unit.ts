@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { buildApp } from "../src/app.js";
+import { buildApp } from "../src/http-app.js";
 import { PortalFieldMapping, PortalObservationEvent, PortalObservationSession } from "../src/db/models.js";
 import { shouldUseDatabase } from "../src/db/runtime.js";
 import { deletePortal, createPortal } from "../src/services/portals.service.js";

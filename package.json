@@ -4,11 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "tsx watch server.ts",
     "build": "tsc -p tsconfig.json",
-    "vercel-build": "npm install mysql2 && npm run db:migrate && npm run db:seed && npm run bundle:vercel",
-    "bundle:vercel": "esbuild serverless/entry.ts --bundle --platform=node --target=node20 --format=esm --outfile=api/index.js --packages=external",
-    "start": "node dist/server.js",
+    "vercel-build": "npm install mysql2 && npm run db:migrate && npm run db:seed",
+    "start": "tsx server.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run test:smoke",
     "test:smoke": "tsx tests/credentials.unit.ts && tsx tests/queue.unit.ts && tsx tests/cloudinary.unit.ts && tsx tests/smoke.ts",
@@ -29,13 +28,12 @@
     "pino": "^9.7.0",
     "playwright": "^1.60.0",
     "sequelize": "^6.37.7",
+    "tsx": "^4.19.4",
     "xlsx": "^0.18.5",
     "zod": "^3.25.76"
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
-    "esbuild": "^0.25.12",
-    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }
 }
