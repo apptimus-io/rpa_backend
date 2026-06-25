@@ -1,4 +1,5 @@
 import { Sequelize } from "sequelize";
+import mysql2 from "mysql2";
 import { env } from "../config/env.js";
 
 function databaseUrl() {
@@ -14,6 +15,7 @@ function databaseUrl() {
 
 export const sequelize = new Sequelize(databaseUrl(), {
     dialect: "mysql",
+    dialectModule: mysql2,
     logging: env.NODE_ENV === "development" ? false : false,
     dialectOptions: {
       connectTimeout: env.DB_CONNECT_TIMEOUT_MS
