@@ -1,3 +1,4 @@
+import "mysql2";
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { buildApp } from "../src/app.js";
 import { initializeDatabase } from "../src/db/index.js";
