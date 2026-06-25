@@ -1,6 +1,6 @@
 import "mysql2";
-import { buildApp } from "./src/http-app.js";
-import { env } from "./src/config/env.js";
+import Fastify from "fastify";
+import { buildApp } from "./src/http-app.js";import { env } from "./src/config/env.js";
 import { initializeDatabase } from "./src/db/index.js";
 import { closeDatabase } from "./src/db/sequelize.js";
 import { safeLogError } from "./src/utils/logger.js";
