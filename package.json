@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "npm install mysql2 && tsc -p tsconfig.json && npm run db:migrate && npm run db:seed",
+    "build": "tsc -p tsconfig.json",
+    "vercel-build": "npm install mysql2 && npm run db:migrate && npm run db:seed",
     "start": "node dist/server.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "npm run test:smoke",
